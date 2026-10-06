@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+/* Brand tokens sampled from the Antonsens logo */
+@theme {
+  --color-forest-950: #0b2e14;
+  --color-forest-900: #10421d;
+  --color-forest: #145324;
+  --color-forest-700: #1d6b31;
+  --color-lime: #94c11f;
+  --color-lime-300: #c3e06a;
+  --color-lime-100: #eef6d6;
+  --color-cream: #f8f7f1;
+  --color-sand: #efece1;
+  --color-ink: #1b2420;
+  --color-muted: #56615b;
+  --color-line: #e2e0d5;
+
+  --font-sans: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+@utility container-x {
+  @apply mx-auto w-full max-w-6xl px-4 sm:px-6;
+}
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-base font-semibold transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest;
+}
+@utility btn-primary {
+  @apply btn bg-lime text-forest-950 shadow-sm hover:bg-lime-300;
+}
+@utility btn-dark {
+  @apply btn bg-forest text-white hover:bg-forest-700;
+}
+@utility btn-ghost {
+  @apply btn border border-forest/20 bg-white text-forest hover:border-forest/40;
+}
+@utility eyebrow {
+  @apply text-sm font-semibold uppercase tracking-wider text-forest-700;
+}
+@utility h2 {
+  @apply text-3xl font-bold tracking-tight text-forest-950 text-balance sm:text-4xl;
+}
+@utility lead {
+  @apply text-lg leading-relaxed text-muted text-pretty;
+}
+@utility input {
+  @apply w-full rounded-xl border-2 border-line bg-white px-4 py-3 text-base focus:border-forest focus:outline-none;
+}
