@@ -1,0 +1,1 @@
+This is the project that will be used to create the website for antonsens trädgård och fastighet, nextjs page, with leadcapture, converting design, trust building, and SEO. also automatic sms and email on quote input 
